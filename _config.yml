@@ -1,0 +1,40 @@
+title: Lee Ge Daily life 
+email: leege233@gmail.com
+author:
+  picture: 1.jpg #URL FORMAT
+  name: Ge Lee
+  location: China
+  description: "GuGuGu-man" 
+   
+description: Waste Time
+baseurl: "/"
+url: https://gelee-q.github.io/
+twitter_username: leesky0000
+github_username:  GeLee-Q
+github_url: https://gelee-q.github.io
+
+
+# Build settings
+permalink: :title
+paginate: 10
+paginate_path: "page:num"
+
+# Siderbar settings
+sidebar:true
+sidebar-about-description:One Day Day,White Learning
+sidebar-avatar: my.JPG
+
+# Featured Tags
+featured-tags: true  
+featured-condition-size: 1 
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
