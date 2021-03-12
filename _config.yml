@@ -1,9 +1,9 @@
 # Site settings
-title: GeLee Blog
+title: Ge Blog
 SEOTitle: 鸡儿的博客 | Ge Blog
-header-img: img/post-bg-os-metro.jpg
+header-img: img/post-bg-os-huang.jpg
 email: leege233@gmail.com
-description: "Waste Time."
+description: "Waste Time"
 keyword: "Daily Learning,Tourism, AI, Culture"
 url: "http://gelee-q.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
@@ -12,7 +12,7 @@ github_repo: "https://github.com/GeLee-Q/gelee-q.github.io.git" # you code repos
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "大梦谁先醒，平生我自知"
-sidebar-avatar: /img/dog.JPG     # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/post-ava.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
