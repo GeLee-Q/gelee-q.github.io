@@ -14,20 +14,26 @@ sass:
   sass_dir: _sass
 
 permalink: /posts/:title/
+
 texture:
-  title: Adam Denisov
+  title: Ge Lee
   tagline: Developer. Designer
   date_format: "%b %-d, %Y"
   style: black
   showNav: false
   showPicker: true
+  
+ # Sidebar settings
+sidebar: true  #添加侧边栏
+sidebar-about-description: "One Day Day ,White Learning"
+# sidebar-avatar:      
 
   # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
+#   social_links:
+#     twitter: thelehhman
+#     github:  thelehhman
+#     linkedIn: in/thelehhman
+#     rss: rss
  
 
 # If you want to link only specific pages in your header, uncomment
