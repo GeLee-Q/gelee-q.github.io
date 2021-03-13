@@ -1,10 +1,10 @@
 # Site settings
-title: 横槊赋诗
+title: 横槊 赋诗
 SEOTitle: 鸡儿的博客 | Ge Blog
-header-img: img/post-bg-os.jpg
+header-img: img/post-head.jpg
 email: leege233@gmail.com
-description: "Waste Time"
-keyword: "Daily Learning,Tourism, AI, Culture"
+description: Waste Time
+keyword: Daily Learning,Tourism, AI, Culture
 url: "http://gelee-q.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/GeLee-Q/gelee-q.github.io.git" # you code repository
@@ -57,7 +57,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+ disqus_username: gelee-q
 
 # Gitalk
 #gitalk:
@@ -97,18 +97,11 @@ service-worker: true
 
 
 ## Friends
-#friends: [
-#    {
-#        title: "WY",
-#        href: "http://zhengwuyang.com"
-#    },{
-#        title: "简书·BY",
-#        href: "http://www.jianshu.com/u/e71990ada2fd"
-#    },{
-#        title: "Apple",
-#        href: "https://apple.com"
-#    },{
-#        title: "Apple Developer",
-#        href: "https://developer.apple.com/"
-#    }
-#]
+friends: [
+  {
+    title: "凡凡",
+    href: "https://qifanwang.github.io/"
+  }
+
+]
+    

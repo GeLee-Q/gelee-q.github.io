@@ -4,7 +4,7 @@ title:      DailyLearning
 subtitle:   每日一题
 date:       2021-03-12
 author:     Lee
-header-img: img/leetcode.jpg
+header-img: img/code.jpg
 catalog: true
 tags:
    - leetcode
