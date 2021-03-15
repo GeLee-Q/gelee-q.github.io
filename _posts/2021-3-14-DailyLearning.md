@@ -57,6 +57,8 @@ public:
 
 - 堆是一个完全二叉树
 - 堆中的每一个节点都必须大于等于（或小于等于）其中每个节点的值。
+- 插入一个数据，把新插入的数据放到数组的最后，进行从下往上的堆化。
+- 删除堆顶数据，把最后一个数据放到堆顶，然后从上往下堆化。
 
 ## 解题思路
 
@@ -76,7 +78,7 @@ void HeapInt(vector<int>& nums){
         if(maxPos ==i) continue;
         swap(nums[i],nums[maxPos]); 
     }
-}
+};
 ```
 
 ### 取K最大值函数
@@ -96,7 +98,46 @@ void HeapInt(vector<int>& nums){
       }
       return nums[0]   
       }
-  }
+  };
   
 ```
 
+### 堆排序
+
+```c++
+int count;
+void buildHeap(vector<int> nums){
+    count = nums.size();
+    int n = count;
+    for(int i=n/2-1;i>=0;i--){
+        heapify(nums,i);
+    }
+}
+void heapify(vector<int> nums,int i ){
+    while(true){
+        int maxPos=i;
+        if(i*2+1<=n && nums[i]<nums[i*2+!]) maxPos = i;
+        if(i*2+2<=n && nums[maxPos]<[i*2+2]) maxPos = i*2+2;
+        if(maxPos == i) break;
+        swap(nums[i],nums[maxPos]);
+        //i = maxPos;
+    }
+}
+
+void sort(vector<int>& nums){
+    buildHeap();
+    int k = nums.size()-1;
+    while(k>0){
+        swap(nums[k],nums[0]);
+        k--;
+        heapify(nums,0);
+    }
+}
+```
+
+### 总结：
+
+- 堆排序是原地排序算法；
+- 建堆的过程时间复杂度是O(n);排序过程的时间复杂度是O(n*logn);所以整体的时间复杂独是O(n*logn)
+- 缺点：堆化的过程是跳着访问的，对CPU的缓存不友好。
+- 对于同样的数据，在排序过程中，堆排序算法的交换次数要多于快速排序。
