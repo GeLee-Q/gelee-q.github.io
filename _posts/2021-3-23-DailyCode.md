@@ -12,6 +12,8 @@ tags:
    - Daily
 ---
 
+> 食蛙则瘦 食熊则肥
+
 # C++ Prime Plus 
 
 ## Chapter 5
@@ -81,7 +83,7 @@ for (int row = 0; row < 4; row++){
 
 
 
-## LC 寻找字符串中第一个唯一字符
+# LC 寻找字符串中第一个唯一字符
 
 ```c++
 class Solution {
