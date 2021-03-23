@@ -81,4 +81,54 @@ for (int row = 0; row < 4; row++){
 
 
 
-## Chapter 6
+## LC 寻找字符串中第一个唯一字符
+
+```c++
+class Solution {
+public:
+    int firstUniqChar(string s) {
+        int n = s.size();
+        int only[26] = {0};
+        int index[26];
+				
+        for(int i = 0 ; i<n; i++){
+            only[s[i]-'a']++;
+            index[s[i]-'a'] = i;
+        }
+        for(int i = 0 ; i<n; i++){
+            if(only[s[i]-'a']==1){
+                return index[s[i]-'a'];
+            }
+        }
+        return -1;
+    }
+};
+```
+
+- only[] 和 index []构成了散列表，即Hash Table；
+
+- [s[i]-'a'] 表示其字母到'a'的距离，其后++则表示数组地址+1；
+
+  ```c++
+  class Solution {
+  public:
+      int firstUniqChar(string s) {
+          int n = s.size();
+          int only[26] = {0};
+  
+          for(int i = 0 ; i<n; i++){
+              only[s[i]-'a']++;
+              
+          }
+          for(int i = 0 ; i<n; i++){
+              if(only[s[i]-'a']==1){
+                  return i;
+              }
+          }
+          return -1;
+      }
+  };
+  ```
+
+  
+
