@@ -13,13 +13,12 @@ tags:
    - mediapipe
 ---
 
+> 相思只在，丁香枝上，豆蔻梢头。
+>
 
 
 
-
-
-
-# 手势识别
+# 手指节点识别
 
 https://google.github.io/mediapipe/
 
@@ -99,5 +98,34 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
+
+
+
+# LC  实验strStr()
+
+```c++
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        
+        int len_H = haystack.size();
+        int len_N = needle.size();
+        if(len_N==0) return 0;
+        int i=0;
+        int j=0;
+        while(i<len_H && j<len_N){
+            if(haystack[i]==needle[j]) {i++;j++;}
+            else{
+                i=i-j+1;
+                j=0;
+            }
+            
+        }
+        if(j==len_N) return (i-j);
+        return -1;      
+    }
+};
+
 ```
 
