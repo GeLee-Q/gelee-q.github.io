@@ -44,19 +44,68 @@ tags:
 
 如果在代码块中定义了变量，其存在时间与作用域将被限制在改代码块内。
 
-static 可以让变量在代码块之后仍存在，并且在**相应作用域做出限制。**
+static 可以让变量在代码块之后仍存在，并且在**相应作用域做出限制。**表示其链接性为内部性。
 
 如果要在多个文件中使用外部变量，只需在一个文件中包含该变量的定义（单定义规则），**但在使用该变量的其他所有文件中，都必须使用关键字extern声明它。**
 
+计算经验表明，程序越能避免对数据进行不必要的访问，就越能保证数据的完整性。
+
+- 通常编译器将使用三块独立的内存，一块用于静态变量，一块用于自动变量，一块用于动态存储。
+
+
+
+new 运算符不仅可以在heap中找到 一个足以满足要求的内存块，也可以把它放到指定的为位置。
+
+```c++
+#include<new>
+struct chaff
+{
+  char dross[20];
+  int slag;
+};
+char buffer1[50];
+char buffer2[200];
+
+int main()
+{
+  chaff *p1 , *p2;
+  int *p3,  *p4;
+  
+  p1 = new chaff;
+  p3 = new int[20];
+  
+  p2 = new (buffer1) chaff; //place structure in buffer1
+  p4 = new (buffer2) int[20]; // place int array in buffer2
+  
+}
+```
 
 
 
 
 
+# LC 最长公共前缀
 
+```c++
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        if(strs.size() == 0 ) return "";
 
+        int len = strs[0].length();
 
-
+        for(int i = 0 ; i<len ; i++){
+            char a = strs[0][i];
+            for(int j = 1 ; j<strs.size(); j++){
+                if( strs[j][i]!= a){
+                    return strs[0].substr(0,i);
+                }
+            }
+        }
+        return strs[0];
+    }
+};
+```
 
 
 
